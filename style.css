@@ -1,8 +1,32 @@
 body {
-	background-image: url("images/wormz.png");
+	background-image: url("images/food3.jpg");
+	/*background-repeat: no-repeat;*/
+	font-family: 'Pacifico', cursive;
 }
 
 h1 {
-	color: red;
 	text-align: center;
+	font-family: 'Pacifico', cursive;
+}
+
+li {
+	text-align: center;
+	font-size: 30px;
+}
+
+#content {
+	text-align: center;
+}
+
+#timer{
+	text-align: center;
+	font-size: 16px;
+}
+
+#start{
+	cursor: pointer;
+	background-color: black;
+ 	color: white;
+ 	font-family: 'Pacifico', cursive;
+ 	padding: 15px 32px;
 }

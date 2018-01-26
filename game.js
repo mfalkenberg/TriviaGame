@@ -6,7 +6,7 @@ var allQuestions = [
 },
 {
     question: 'In which country did cheddar cheese originate?',
-    choices: ['England', 'USA', 'Russia', 'Spain'],
+    choices: ['USA', 'Russia', 'England', 'Spain'],
     correctAnswer: 'England'
 },
 {
@@ -16,12 +16,12 @@ var allQuestions = [
 },
 {   
     question: 'What is the main ingredient in thousand island dressing?',
-    choices: ['Mayonnaise', 'Mustard', 'Wipping cream', 'Milk'],
+    choices: ['Mustard', 'Mayonnaise', 'Wipping cream', 'Milk'],
     correctAnswer: 'Mayonnaise'
 },
 {   
     question: 'Sushi is a type of cuisine that originated in what country?',
-    choices: ['Japan', 'China', 'India', 'Thailand'],
+    choices: ['China', 'India', 'Thailand', 'Japan'],
     correctAnswer: 'Japan'
 }];
 
@@ -46,7 +46,7 @@ $( "#start" ).click(function() {
     startTimer();
 });
 
-var i = 60;
+var i = 3;
 var timer;
 function startTimer() {
     timer = setInterval(function(){ 
@@ -64,6 +64,7 @@ function onFinish() {
     var unanswered = 0;
 
     for (var i = 0; i < allQuestions.length; i++) {
+        //http://www.jquerybyexample.net/2012/02/get-radio-button-value-using-jquery.html?m=1
         var radioValue = $("input[name=question_" + i +  "]:checked").val();
         var correctAnswerForQuestion = allQuestions[i].correctAnswer;
         if (typeof radioValue == 'undefined') {
