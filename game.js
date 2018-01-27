@@ -46,9 +46,10 @@ $( "#start" ).click(function() {
     startTimer();
 });
 
-var i = 3;
+var i = 60;
 var timer;
 function startTimer() {
+    $("#timer").html("Time remaining: " + i + " Seconds");
     timer = setInterval(function(){ 
         $("#timer").html("Time remaining: " + i-- + " Seconds");
         if (i<0) {
@@ -77,11 +78,11 @@ function onFinish() {
     }
        
     var allDone = "<h2>All Done!</h2>";
-    allDone += "<ul>";
-    allDone += "<li>Correct Answers: " + rightAnswer + "</li>";
-    allDone += "<li>Incorrect Answers: " + wrongAnswer + "</li>";
-    allDone += "<li>Unanswered: " + unanswered + "</li>";
-    allDone += "</ul>";               
+    
+    allDone += "<p>Correct Answers: " + rightAnswer + "</p>";
+    allDone += "<p>Incorrect Answers: " + wrongAnswer + "</p>";
+    allDone += "<p>Unanswered: " + unanswered + "</p>";
+                 
     $("#content").html(allDone);  
 }
 
